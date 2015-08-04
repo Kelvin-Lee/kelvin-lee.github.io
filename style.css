@@ -1,3 +1,32 @@
 html{
 	background-color: #152535;
 }
+
+#K-sprite-div{
+	background-color: inherit;
+	height: 240px;
+	width: 240px;
+	float: left;
+	padding-bottom: 50px;
+}
+
+#L-sprite-div
+{
+	background-color: inherit;
+	height: 240px;
+	width: 240px;
+}
+
+.pixel{
+	width: 25%;
+	height: 25%;
+	float: left;
+}
+
+.white{
+	background-color: #FFFFFF;
+}
+
+.alpha{
+	background-color: inherit;
+}
