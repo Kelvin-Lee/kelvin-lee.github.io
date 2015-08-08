@@ -2,12 +2,41 @@ html{
 	background-color: #152535;
 }
 
-#initials-house{
-	background-color: #455565;
+
+#outer_helper{
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#middle_helper{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#inner_helper{
 	margin-left: auto;
 	margin-right: auto;
+	width: 1000px;
+	background-color: #FFFFFF;
+}
+
+#initials-house{
+	background-color: #455565;
 	height: 600px; 
 	width: 300px; 
+	position: relative;
+	top: 5%;
+	left: 5%;
+	float: left;
+}
+
+#display-case{
+	background-color: #676869;
+	height: 600px;
+	width: 600px;
+	float: right;
 }
 
 #K-sprite-div{
@@ -42,3 +71,19 @@ html{
 .alpha{
 	background-color: inherit;
 }
+
+#pixel_K_00{
+}
+
+#pixel_K_03{
+}
+
+#pixel_K_12{
+}
+
+#pixel_K_15{
+}
+
+#pixel_L_00, #pixel_L_03, #pixel_L_12, #pixel_L_15{
+}
+

@@ -4,86 +4,85 @@
 <head>
 	<link rel = "stylesheet" href = "style.css"> </link>
 </head>
+<body>
+	<div id = "outer_helper">
+		<div id = "middle_helper">
+			<div id ="inner_helper">
+				<div id = "initials-house" style= "height: 600px; width: 300px; background-color: #455565;">
+				<!-- ***** K SPRITE (made of Divs) ***** 
 
-<body id = "initials-house" style= "height: 600px; width: 300px; background-color: #455565;">
+				* BASIC DESC.: The 'k-sprite-div' houses 16 other divs, and by
+				using the 'float' property, create a 4x4 group of smaller divs.
+				These smaller divs are 'pixels' of the sprite.
+				* DETAILS:
+					* pixels are assigned a class of <white, alpha> 
+					  depending on if I want them filled in white ("white"), 
+					  or transparent ("alpha")-->
 
-<!--
-<div id = "k-sprite">
-	<img src = "images/K Sprite white alpha.png">
-</div>
--->
+					<div class = "initials-sprite" id = "K-sprite-div">
+						<!-- First row of pixels -->
+						<div class = "pixel white K" id = "pixel_K_00"></div>
+						<div class = "pixel alpha K" id = "pixel_K_01"></div>
+						<div class = "pixel alpha K" id = "pixel_K_02"></div>
+						<div class = "pixel white K" id = "pixel_K_03"></div>
+						
+						<!-- Second row of pixels -->
+						<div class = "pixel white K" id = "pixel_K_04"></div>
+						<div class = "pixel alpha K" id = "pixel_K_05"></div>
+						<div class = "pixel white K" id = "pixel_K_06"></div>
+						<div class = "pixel alpha K" id = "pixel_K_07"></div>
 
+						<!-- Third row of pixels -->
+						<div class = "pixel white K" id = "pixel_K_08"></div>
+						<div class = "pixel white K" id = "pixel_K_09"
+							style = "height: 12.5%"></div>
+						<div class = "pixel white K" id = "pixel_K_10"></div>
+						<div class = "pixel alpha K" id = "pixel_K_11"></div>
+						
+						<!-- Fourth row of pixels -->
+						<div class = "pixel white K" id = "pixel_K_12"></div>
+						<div class = "pixel alpha K" id = "pixel_K_13"></div>
+						<div class = "pixel alpha K" id = "pixel_K_14"></div>
+						<div class = "pixel white K" id = "pixel_K_15"></div>
+					</div>
 
-<!-- ***** K SPRITE (made of Divs) ***** 
+					<div class = "initials-sprite" id = "L-sprite-div">
+						<!-- First row of pixels -->
+						<div class = "pixel white L" id = "pixel_L_00"></div>
+						<div class = "pixel alpha L" id = "pixel_L_01"></div>
+						<div class = "pixel alpha L" id = "pixel_L_02"></div>
+						<div class = "pixel alpha L" id = "pixel_L_03"></div>
+						
+						<!-- Second row of pixels -->
+						<div class = "pixel white L" id = "pixel_L_04"></div>
+						<div class = "pixel alpha L" id = "pixel_L_05"></div>
+						<div class = "pixel alpha L" id = "pixel_L_06"></div>
+						<div class = "pixel alpha L" id = "pixel_L_07"></div>
 
-* BASIC DESC.: The 'k-sprite-div' houses 16 other divs, and by
-using the 'float' property, create a 4x4 group of smaller divs.
-These smaller divs are 'pixels' of the sprite.
-* DETAILS:
-	* pixels are assigned a class of <white, alpha, special> 
-	  depending on if I want them filled in white ("white"), 
-	  transparent ("alpha"), or need special attention
-	  ("special")
-	* .special pixels are needed because the design of the
-	  k-sprite requires one of the pixels to be misaligned
-	  with the 4x4 grid. I have to mimic the appearance
-	  of a single pixel by smushing together two half pixels
--->
+						<!-- Third row of pixels -->
+						<div class = "pixel white L" id = "pixel_L_08"></div>
+						<div class = "pixel alpha L" id = "pixel_L_09"></div>
+						<div class = "pixel alpha L" id = "pixel_L_10"></div>
+						<div class = "pixel alpha L" id = "pixel_L_11"></div>
+						
+						<!-- Fourth row of pixels -->
+						<div class = "pixel white L" id = "pixel_L_12"></div>
+						<div class = "pixel white L" id = "pixel_L_13"
+							style = "width: 18.75%;"></div>
+						<div class = "pixel alpha L" id = "pixel_L_14"
+							style = "width: 31.25%;"></div>
+						<div class = "pixel white L" id = "pixel_L_15"></div>
+					</div> <!-- END L-sprite --> 
 
-<div class = "initials-sprite" id = "K-sprite-div">
-	<!-- First row of pixels -->
-	<div class = "pixel white K" id = "pixel_k_00"></div>
-	<div class = "pixel alpha K" id = "pixel_k_01"></div>
-	<div class = "pixel alpha K" id = "pixel_k_02"></div>
-	<div class = "pixel white K" id = "pixel_k_03"></div>
-	
-	<!-- Second row of pixels -->
-	<div class = "pixel white K" id = "pixel_k_04"></div>
-	<div class = "pixel alpha K" id = "pixel_k_05"></div>
-	<div class = "pixel white K" id = "pixel_k_06"></div>
-	<div class = "pixel alpha K" id = "pixel_k_07"></div>
+				</div> <!-- END initials house -->
 
-	<!-- Third row of pixels -->
-	<div class = "pixel white K" id = "pixel_k_08"></div>
-	<div class = "pixel white K" id = "pixel_k_09"
-		style = "height: 12.5%"></div>
-	<div class = "pixel white K" id = "pixel_k_10"></div>
-	<div class = "pixel alpha K" id = "pixel_k_11"></div>
-	
-	<!-- Fourth row of pixels -->
-	<div class = "pixel white K" id = "pixel_k_12"></div>
-	<div class = "pixel alpha K" id = "pixel_k_13"></div>
-	<div class = "pixel alpha K" id = "pixel_k_14"></div>
-	<div class = "pixel white K" id = "pixel_k_15"></div>
-</div>
-
-<div class = "initials-sprite" id = "L-sprite-div">
-
-	<!-- First row of pixels -->
-	<div class = "pixel white L" id = "pixel_L_00"></div>
-	<div class = "pixel alpha L" id = "pixel_L_01"></div>
-	<div class = "pixel alpha L" id = "pixel_L_02"></div>
-	<div class = "pixel alpha L" id = "pixel_L_03"></div>
-	
-	<!-- Second row of pixels -->
-	<div class = "pixel white L" id = "pixel_L_04"></div>
-	<div class = "pixel alpha L" id = "pixel_L_05"></div>
-	<div class = "pixel alpha L" id = "pixel_L_06"></div>
-	<div class = "pixel alpha L" id = "pixel_L_07"></div>
-
-	<!-- Third row of pixels -->
-	<div class = "pixel white L" id = "pixel_L_08"></div>
-	<div class = "pixel alpha L" id = "pixel_L_09"></div>
-	<div class = "pixel alpha L" id = "pixel_L_10"></div>
-	<div class = "pixel alpha L" id = "pixel_L_11"></div>
-	
-	<!-- Fourth row of pixels -->
-	<div class = "pixel white L" id = "pixel_L_12"></div>
-	<div class = "pixel white L" id = "pixel_L_13"
-		style = "width: 18.75%;"></div>
-	<div class = "pixel alpha L" id = "pixel_L_14"
-		style = "width: 31.25%;"></div>
-	<div class = "pixel white L" id = "pixel_L_15"></div>
-</div>
+				<div id = "display-case"> 			
+				</div>
+			</div> <!-- END inner_helper -->
+		</div> <!-- END middle_helper -->
+	</div> <!-- END outer_helper -->
 </body>
+
+<script src="scripts/main.js"></script>
+
 </html>
