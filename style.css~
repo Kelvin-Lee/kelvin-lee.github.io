@@ -1,0 +1,97 @@
+html{
+	background-color: #152535;
+}
+
+
+#outer_helper{
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#middle_helper{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#inner_helper{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	background-color: #FFFFFF;
+}
+
+#initials-house{
+	background-color: #455565;
+	height: 600px; 
+	width: 300px; 
+	position: relative;
+	float: left;
+}
+
+#display-case{
+	background-color: #152535;
+	height: 600px;
+	width: 600px;
+	float: right;
+}
+
+
+#K-sprite-div{
+	float: left;
+	height: 256px;
+	width: 256px;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	padding-left: 10%;
+}
+
+#L-sprite-div
+{
+	background-color: inherit;
+	height: 256px;
+	width: 256px;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	padding-left: 10%;
+}
+
+.pixel{
+	width: 60px;
+	height: 60px;
+	float: left;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #455565;
+}
+
+.white{
+	background-color: #FFFFFF;
+}
+
+.alpha{
+	background-color: inherit;
+}
+
+.display{
+	display: table;
+	background-color: #FFFFFF;
+	width: 298px;
+	height: 299px;
+	float: left;
+	margin: 1px;
+}
+
+.boast{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #455565;
+
+	color: #FFFFFF;
+	font-family: "Monospace", "Courier";
+	font-size: 50px;
+}
+
+
