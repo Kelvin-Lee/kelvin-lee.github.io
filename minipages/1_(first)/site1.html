@@ -8,7 +8,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title> K . L . </title>
 	<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -21,13 +21,32 @@
 
 <body>
 
-	<a href="minipages/1_(first)/site1.html" style = "color: #FFFFFF; text-decoration: #FF0000;">1</a>	
+	<div class = "container">
+		<div class = "jumbotron text-center" id = "jumbotron">
+			<div id = "jumbotron-display">
+				<img class = "name-initial" src = "images/K.png">
+				<img class = "name-initial" src = "images/L.png">
+			</div>
 
+			<div id = "jumbotron-display-alt">
+				<iframe width="420" height="315" src="https://www.youtube.com/embed/KhwSPENR1es" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+		</div>
+	</div>
+
+	<div class = "container">
+		<div class = "btn-group btn-group-justified">
+				<a class = "btn" id = "work" href = "downloadables/Kelvin-Lee-web-resume.pdf" download>WORK</a>
+				<a class = "btn" id = "non-work" onClick = "toggleNonWork()">NON-WORK</a>
+				<a class = "btn" id = "contact" onClick = "toggleContact()">CONTACT</a>
+		</div>
+	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	    	<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="../../js/bootstrap.min.js"></script>
 		<script src="js/custom-script.js"></script>
 
 

@@ -1,43 +1,7 @@
 html{
-	background-color: #152535;
+	background-color: #335577;
 }
 
 body{
-	height: 100%;
-	width: 100%;
 	background-color: inherit;
-	padding: 15px;
-}
-
-.container .jumbotron{
-	background-color: #354565;
-	border-radius: 0px;
-}
-
-.name-initial{
-	margin: 30px;
-}
-
-#jumbotron-display{
-	display : block;
-}
-
-#jumbotron-display-alt{
-	display : none;
-}
-
-/* Basic button style defined on line 3001 of bootstrap.css */
-.container .btn-group{
-	width: 100%;
-}
-
-.btn{
-	height: 200px;
-	width: 33.333%;
-	font-family: "Courier", "Sans-Serif";
-	background-color: #354565;
-	border-color: #152535;
-	color: #FFFFFF;
-	font-size: 30px;
-	border-radius: 0px;
 }
