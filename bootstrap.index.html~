@@ -20,17 +20,16 @@
 </head>
 
 <body>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="../../js/bootstrap.min.js"></script>
+	<div id="my_name">
+		<h1>K E L V I N <span id="K"> /K/ </span> L E E</h1>
+	</div>
+	
 
-	<!-- Processing.js -->
-	<script src="p5/p5.min.js"></script>
-
-	<!-- My own scripts -->
-	<script src="js/p5-custom-script.js"></script>
-	<script src="js/custom-script.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="js/custom-script.js"></script>
 
 
 </body>

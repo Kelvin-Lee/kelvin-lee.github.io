@@ -2,108 +2,52 @@
 <html>
 
 <head>
-	<link rel = "stylesheet" href = "style.css"> </link>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title> Kelvin Lee </title>
+	<!-- Bootstrap -->
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<link rel = "stylesheet" href = "css/custom-style.css"></link>
+
 </head>
+
 <body>
-	<div id = "outer_helper">
-		<div id = "middle_helper">
-			<div id ="inner_helper">
-				<div id = "initials-house" style= "height: 600px; width: 300px; background-color: #455565;">
-				<!-- ***** K SPRITE (made of Divs) ***** 
+	<div id="banner">
+		<h1>K E L V I N / K / L E E _</h1>
+	</div>
 
-				* BASIC DESC.: The 'k-sprite-div' houses 16 other divs, and by
-				using the 'float' property, create a 4x4 group of smaller divs.
-				These smaller divs are 'pixels' of the sprite.
-				* DETAILS:
-					* pixels are assigned a class of <white, alpha> 
-					  depending on if I want them filled in white ("white"), 
-					  or transparent ("alpha")-->
+	<div id="above-shoulders">
+		<div id="face" style="width: 500px; height: 500px; margin: 0px auto; position: relative">
+			<img id="my_face" src="images/me_happy.png">
+			<img id="my_eyes" src="images/glasses.png" style="margin-top: 215px">
+		</div>
+	</div>
 
-					<div class = "initials-sprite" id = "K-sprite-div">
-						<!-- First row of pixels -->
-						<div class = "pixel white K" id = "pixel_K_00"></div>
-						<div class = "pixel alpha K" id = "pixel_K_01"></div>
-						<div class = "pixel alpha K" id = "pixel_K_02"></div>
-						<div class = "pixel white K" id = "pixel_K_03"></div>
-						
-						<!-- Second row of pixels -->
-						<div class = "pixel white K" id = "pixel_K_04"></div>
-						<div class = "pixel alpha K" id = "pixel_K_05"></div>
-						<div class = "pixel white K" id = "pixel_K_06"></div>
-						<div class = "pixel alpha K" id = "pixel_K_07"></div>
+	<div class = "container">
+		<div class="btn-group btn-group-justified">
+			<a class = "btn" href = "https://github.com/Kelvin-Lee"> Github </a>
+			<a class = "btn" onClick = "toggleText()"> Contact </a>
+		</div>
+	</div>
 
-						<!-- Third row of pixels -->
-						<div class = "pixel white K" id = "pixel_K_08"></div>
-						<div class = "pixel white K" id = "pixel_K_09"
-							style = "height: 12.5%;"></div>
-						<div class = "pixel white K" id = "pixel_K_10"></div>
-						<div class = "pixel alpha K" id = "pixel_K_11"></div>
-						
-						<!-- Fourth row of pixels -->
-						<div class = "pixel white K" id = "pixel_K_12"></div>
-						<div class = "pixel alpha K" id = "pixel_K_13"></div>
-						<div class = "pixel alpha K" id = "pixel_K_14"></div>
-						<div class = "pixel white K" id = "pixel_K_15"></div>
-					</div>
+	
 
-					<div class = "initials-sprite" id = "L-sprite-div">
-						<!-- First row of pixels -->
-						<div class = "pixel white L" id = "pixel_L_00"></div>
-						<div class = "pixel alpha L" id = "pixel_L_01"></div>
-						<div class = "pixel alpha L" id = "pixel_L_02"></div>
-						<div class = "pixel alpha L" id = "pixel_L_03"></div>
-						
-						<!-- Second row of pixels -->
-						<div class = "pixel white L" id = "pixel_L_04"></div>
-						<div class = "pixel alpha L" id = "pixel_L_05"></div>
-						<div class = "pixel alpha L" id = "pixel_L_06"></div>
-						<div class = "pixel alpha L" id = "pixel_L_07"></div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="../../js/bootstrap.min.js"></script>
+		<script src="js/custom-script.js"></script>
 
-						<!-- Third row of pixels -->
-						<div class = "pixel white L" id = "pixel_L_08"></div>
-						<div class = "pixel alpha L" id = "pixel_L_09"></div>
-						<div class = "pixel alpha L" id = "pixel_L_10"></div>
-						<div class = "pixel alpha L" id = "pixel_L_11"></div>
-						
-						<!-- Fourth row of pixels -->
-						<div class = "pixel white L" id = "pixel_L_12"></div>
-						<div class = "pixel white L" id = "pixel_L_13"></div>
-						<div class = "pixel white L" id = "pixel_L_14"></div>
-						<div class = "pixel white L" id = "pixel_L_15"></div>
-					</div> <!-- END L-sprite --> 
 
-				</div> <!-- END initials house -->
-
-				<div id = "display-case"> 		
-					<div class = "display">
-						<div class = "boast">
-							<img src="images\work.png" style = "height: 25%; width: 25%;"></img>
-						</div>
-					</div>
-
-					<div class = "display">
-						<div class = "boast">
-							<img src="images\personal.png" style = "height: 25%; width: 25%;"></img>
-						</div>
-					</div>
-
-					<div class = "display">
-						<div class = "boast">
-							RECENTLY
-						</div>
-					</div>
-					
-					<div class = "display">
-						<div class = "boast">
-							CONTACT
-						</div>
-					</div>
-				</div>
-			</div> <!-- END inner_helper -->
-		</div> <!-- END middle_helper -->
-	</div> <!-- END outer_helper -->
 </body>
 
-<script src="scripts/main.js"></script>
-
 </html>
+
