@@ -34,6 +34,7 @@
 	<div class = "container">
 		<div class="btn-group btn-group-justified">
 			<a class = "btn" href = "https://github.com/Kelvin-Lee"> Github </a>
+			<a class = "btn" href = "http://stackoverflow.com/users/5455994/kelvin-lee?tab=profile"> StackOverflow </a>
 		</div>
 	</div>
 

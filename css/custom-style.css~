@@ -5,27 +5,22 @@ html{
 }
 
 body{
+	background-color: #DDDDDD;
 	margin: 0px auto; // centers
 	max-width: 90%;
 	padding: 5%;
-	width: 90%;
 }
 
 #above-shoulders{
 	margin: 0px auto;
 	width: 50%;
-	position: relative;
 }
 
-#face img{
-	margin: 0 auto;
-	width: 100%;
-	position: absolute;
-}
 
 #banner{
 	display: block;
 	font-family: "Courier New";
+	color: #FFFFFF;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -34,3 +29,8 @@ body{
 	font-family: "Courier New";
 }
 
+#face img{
+	margin: 0 auto;
+	width: 100%;
+	position: absolute;
+}
