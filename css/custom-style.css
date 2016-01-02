@@ -3,34 +3,46 @@ html{
 	height: 100%;
 	width: 100%;
 }
-
+  
+/* Parent element   : html */
 body{
 	background-color: #AAAAAA;
-	margin: 0px auto; // centers
+	margin: 0px auto; /* centers element */
 	max-width: 90%;
 	padding: 5%;
 }
 
+/* Parent element   : body */
 #above-shoulders{
-	margin: 0px auto;
+	margin: 0px auto; /* centers element */
 	width: 50%;
 }
 
 
+/* Parent element   : body */
 #banner{
 	display: block;
 	font-family: "Courier New";
 	color: #FFFFFF;
-	margin: 0 auto;
+	margin: 0 auto; /* centers element */
 	text-align: center;
 }
 
+/* Parent element   : .btn-group */
 .btn{
 	font-family: "Courier New";
 }
 
+#face {
+	width: 500px;
+	height: 500px;
+	margin: 0px auto;
+	position: relative;
+}
+
+/* Parent element   : `#face` */
 #face img{
-	margin: 0 auto;
+	margin: 0 auto; /* centers element */
 	width: 100%;
 	position: absolute;
 }
