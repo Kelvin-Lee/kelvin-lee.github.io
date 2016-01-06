@@ -34,25 +34,58 @@ console.log('#innerhover');
     });
 });
 
-function toggleNonWork()
+function makeSquare(n)
 {
-    var button = document.getElementById("non-work");
-    var current = button.innerHTML;
-    
-    if (current == primaryNonWorkString)
+    var strA = "<div class = 'mypx "
+
+    for (var i = 1; i <= n*n; i++)
     {
-        button.innerHTML = secondaryNonWorkString;
-	secondaryDisplay.style.display = "block";
-	primaryDisplay.style.display = "none";
+    	var isTop = (i <= n);
+	var isBottom = (i > n * (n-1));
+	var isLSide = (i % n == 1)
+	var isRSide = (i % n == 0)
+
+        var strB = ""
+	var strC  = "' id = '" + i + "'>" + i + "</div>"
+
+    	if (isTop || isBottom || isLSide || isRSide)
+	{
+            strB = "outer ";
+            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
+	}
+
+	else
+	{
+            strB += "inner "
+            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
+	}
+
+	if (isTop)
+	{
+	    strB += "top ";
+            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
+	}
+
+	if (isBottom)
+	{
+            strB += "bottom ";
+            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
+	}
+
+
+        $('#bigbox').append(strA + strB + strC);
     }
 
-    if (current == secondaryNonWorkString)
-    {
-        button.innerHTML = primaryNonWorkString;
-	primaryDisplay.style.display = "block"
-	secondaryDisplay.style.display = "none";
-    }
+    $(".mypx").css( "width", "50px");
+    $(".mypx").css("height", "50px");
 
-    /* EXCEPTION HANDLER should go here */
-}//toggleNonWork
 
+    var dim = n * 52 + "px";
+    console.log(dim);
+    $('#bigbox').css( "width", dim);
+    $('#bigbox').css("height", dim);
+
+
+};
+
+makeSquare(15);
