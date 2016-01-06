@@ -51,39 +51,39 @@ function makeSquare(n)
     	if (isTop || isBottom || isLSide || isRSide)
 	{
             strB = "outer ";
-            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
 	}
 
 	else
 	{
             strB += "inner "
-            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
 	}
 
 	if (isTop)
 	{
 	    strB += "top ";
-            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
 	}
 
 	if (isBottom)
 	{
             strB += "bottom ";
-            strC  = "' id = '" + i + "'>" + i + strB + "</div>"
 	}
 
 
         $('#bigbox').append(strA + strB + strC);
     }
 
-    $(".mypx").css( "width", "50px");
-    $(".mypx").css("height", "50px");
+    var pixdim = 25;
+    var pixdmstr = pixdim + "px"
+
+    $(".mypx").css( "width", pixdmstr);
+    $(".mypx").css("height", pixdmstr);
 
 
-    var dim = n * 52 + "px";
-    console.log(dim);
-    $('#bigbox').css( "width", dim);
-    $('#bigbox').css("height", dim);
+    var dim = n * (pixdim + 2);
+    var dimstr = dim + "px";
+    console.log(dimstr);
+    $('#bigbox').css( "width", dimstr);
+    $('#bigbox').css("height", dimstr);
 
 
 };
