@@ -3,7 +3,7 @@
 /* ----------------------------------------- */
 
 html{
-    background-color: #AAAAAA;
+    background-color: #FFFFFF;
     height: 80%;
     margin: 0px auto; /* centers element */
     width: 80%;
@@ -11,7 +11,7 @@ html{
   
 /* Parent   : html */
 body{
-    background-color: #AAAAAA;
+    background-color: #FFFFFF;
     margin: 0px auto; /* centers element */
     max-width: 90%;
     padding: 5%;
@@ -32,8 +32,9 @@ body{
     height: 100px;
     width: 100px;
     margin: 1px;
-    background-color: #0000FF;
+    background-color: inherit;
     float: left;
+    box-shadow: 1px 1px 0.5px grey;
 }
 
 
