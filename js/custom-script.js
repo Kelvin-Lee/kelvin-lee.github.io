@@ -1,4 +1,10 @@
-$(document).ready(function(){
+var PXSIDE = 20;
+var TOTALPX  = PXSIDE * PXSIDE
+
+$(document).ready(function()
+{
+
+    makeSquare(PXSIDE);
 
     $('#tog').click(function(){
         $(".mypx").html('');
@@ -7,49 +13,94 @@ $(document).ready(function(){
     $('#SOhover').mouseover(function()
     {
 
-	//$(".inner").css("background-color", "#000000");
-
         // Grey stack container
-	$("#121, #135, #136, #150, #151, #165, #166, #180, #181, #195, #196, #210").css("background-color", "#444444");
-	$(".bottom").css("background-color", "#444444");
+	$(getNumbers([stackcontainer])).css("background-color", "#444444");
 
-        // Bottom stack layer
-        $(/*"#168, #169, #170, #171, #172, #173, #174, #175, #176, #177, #178"*/
-      /*+*/ " #183, #184, #185, #186, #187, #188, #189, #190, #191, #192, #193").css("background-color","orange");
-
-        // Second-from-bottom stack layer
-	$("#153, #154, #155, #156, #157, #158, #159, #160, #161, #162, #163").css("background-color", "orange");
-
-        // Third-from-bottom stack layer
-        $("#123, #124, #125, #126, #127"/* "#108, #109, #110, #111, #112"*/ + ", #128, #129, #130, #131, #132, #133"
-     /* + ", #138, #139, #140, #141, #142, #143, #144, #145, #146, #147, #148"*/).css("background-color", "orange");
+	// Flat oranger stack frames
+        $(getNumbers([stacklayers])).css("background-color", "orange");
 
 
-      // First (from bottom) tilted stack layer
-      $("#63, #64, #65, #66" + ", #82, #83, #84, #85" + ",#101, #102, #103").css("background-color", "orange");
-
-      // Second (from bottom) tilted stack layer
-      $("#4, #5" + ", #21, #22" + ", #38, #39" + ", #55, #56" +", #72, #73").css("background-color", "orange");
-    
-    
     });
 
 
-    $('#cornerhover').mouseover(function()
-    {
-console.log('#cornerhover');
-    });
-
-    $('#boxhover').mouseover(function()
-    {
-console.log('#boxhover');
-    });
-    
-    $('#innerhover').mouseover(function()
-    {
-console.log('#innerhover');
-    });
 });
+
+function stackcontainer(i)
+{
+    console.log("i=" + i + ":" + colr(1)(i));
+    var isSideWall = (coll(1)(i) || colr(1)(i)) && (i > PXSIDE * Math.round(PXSIDE / 2 )) 
+    var isBottom   = rowb(1)(i);
+    return (isSideWall || isBottom);
+}
+
+function stacklayers(i)
+{
+    var layer1 = ( rowb(3)(i) || rowb(4)(i) ) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
+    var layer2 = ( rowb(6)(i) || rowb(7)(i) ) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
+    return (layer1 || layer2);
+}
+
+// Select nth row from top (1 = first)
+function rowt(n)
+{
+    return function(i)
+    {
+        return (PXSIDE * (n - 1) + 1 <= i &&  i <= n * PXSIDE);
+    }
+}
+
+// Select nth row from bottom (1 = bottom)
+function rowb(n)
+{
+    return function(i)
+    {
+        return (PXSIDE * (PXSIDE - n) + 1 <= i &&  i <= (PXSIDE - (n-1))  * PXSIDE);
+    }
+}
+
+// Select nth col from left (1 = left-most)
+function coll(n)
+{
+    return function(i)
+    {
+        return (i % PXSIDE == n);
+    }
+}
+
+// Select nth col from right (1 = right-most)
+function colr(n)
+{
+    return function(i)
+    {
+        // % does not return the modulus when remainder is 0,
+	// so we need to make the righthand expression interesting
+        return (i % PXSIDE == (PXSIDE - (n - 1)) % PXSIDE);
+    }
+}
+
+
+
+function getNumbers(a_foo)
+{ 
+    var upbound = TOTALPX;
+    var s_str = "";
+    for (var i = 1; i <= upbound; i++)
+    {
+        for (var j = 0; j < a_foo.length; j++)
+	{
+            if (a_foo[0](i))
+	    {
+                s_str += ",#" + i;
+		break;
+	    }
+	}
+    }
+
+    // Remove up to the second char in the string (zero-based).
+    s_str = s_str.slice(1);
+
+    return s_str;
+}
 
 function makeSquare(n)
 {
@@ -63,8 +114,8 @@ function makeSquare(n)
 	var isRSide = (i % n == 0)
 
         var strB = ""
-	//var strC  = "' id = '" + i + "'>" +  i + "</div>"
-	var strC  = "' id = '" + i + "'>" + "</div>"
+	var strC  = "' id = '" + i + "'>" +  i + "</div>"
+	//var strC  = "' id = '" + i + "'>" + "</div>"
 
     	if (isTop || isBottom || isLSide || isRSide)
 	{
@@ -106,11 +157,9 @@ function makeSquare(n)
 
     var dim = n * (pixdim + 2);
     var dimstr = dim + "px";
-    console.log(dimstr);
     $('#bigbox').css( "width", dimstr);
     $('#bigbox').css("height", dimstr);
 
 
 };
 
-makeSquare(15);
