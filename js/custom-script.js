@@ -15,16 +15,28 @@ $(document).ready(function()
 
         // Grey stack container
 	$(getNumbers([stackcontainer])).css("background-color", "#444444");
-        $(getNumbers([stacklayers])).css("background-color", "orange");
-
-        $(getNumbers([rect(81, 1, 4)])).css("background-color", "blue");
         
+	$(getNumbers([stacklayers])).css("background-color", "orange");
+        
+	$(getNumbers([rect(143, 4 , 2)])).css("background-color", "orange");
+        $(getNumbers([rect(167, 4, 2)])).css("background-color", "orange");
+        $(getNumbers([rect(191, 4, 2)])).css("background-color", "orange");
+        $(getNumbers([rect(215, 4, 2)])).css("background-color", "orange");
 
+        $(getNumbers([rect(27, 3, 2)])).css("background-color", "orange");
+        $(getNumbers([rect(70, 3, 2)])).css("background-color", "orange");
+        $(getNumbers([rect(113, 3, 2)])).css("background-color", "orange");
+        $(getNumbers([rect(156, 3, 2)])).css("background-color", "orange");
     });
 
 
 
 });
+
+function all(i)
+{
+return true;
+} 
 
 // Returns an array of functions that can be called to evaluate
 // whether a given i is within the rectangle specified by the arguments
