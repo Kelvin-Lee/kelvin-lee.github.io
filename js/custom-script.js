@@ -14,11 +14,12 @@ $(document).ready(function()
     {
 
         // Grey stack container
-	$(getNumbers([stackcontainer])).css("background-color", "#444444");
+	$(getNumbers([stackcontainer, stacklayers])).css("background-color", "#444444");
 
-	// Flat oranger stack frames
-        $(getNumbers([stacklayers])).css("background-color", "orange");
+	// 2 flat orange stack frames
+//        $(getNumbers([stacklayers])).css("background-color", "orange");
 
+        
 
     });
 
@@ -27,7 +28,6 @@ $(document).ready(function()
 
 function stackcontainer(i)
 {
-    console.log("i=" + i + ":" + colr(1)(i));
     var isSideWall = (coll(1)(i) || colr(1)(i)) && (i > PXSIDE * Math.round(PXSIDE / 2 )) 
     var isBottom   = rowb(1)(i);
     return (isSideWall || isBottom);
@@ -36,8 +36,10 @@ function stackcontainer(i)
 function stacklayers(i)
 {
     var layer1 = ( rowb(3)(i) || rowb(4)(i) ) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
-    var layer2 = ( rowb(6)(i) || rowb(7)(i) ) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
-    return (layer1 || layer2);
+  var cont =  rowb(7)(i) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
+  var bendup   = rowb(8)(i) && i % PXSIDE > coll(2)() && i % PXSIDE < coll(Math.round(PXSIDE/2))();
+  var benddown = rowb(6)(i) && i % PXSIDE < colr(2)() && i % PXSIDE >= coll(Math.round(PXSIDE/2))();
+  return layer1 || cont || bendup || benddown;
 }
 
 // Select nth row from top (1 = first)
@@ -63,7 +65,14 @@ function coll(n)
 {
     return function(i)
     {
-        return (i % PXSIDE == n);
+        if (i)
+	{
+            return (i % PXSIDE == n);
+	}
+	else
+	{
+	    return n ;
+	}
     }
 }
 
@@ -72,9 +81,16 @@ function colr(n)
 {
     return function(i)
     {
+        if (i)
+	{
         // % does not return the modulus when remainder is 0,
-	// so we need to make the righthand expression interesting
-        return (i % PXSIDE == (PXSIDE - (n - 1)) % PXSIDE);
+	// so we need to make the righthand expression 'interesting'
+            return (i % PXSIDE == (PXSIDE - (n - 1)) % PXSIDE);
+	}
+	else
+	{
+	   return (PXSIDE - (n-1) % PXSIDE);
+	}
     }
 }
 
@@ -88,7 +104,7 @@ function getNumbers(a_foo)
     {
         for (var j = 0; j < a_foo.length; j++)
 	{
-            if (a_foo[0](i))
+            if (a_foo[j](i))
 	    {
                 s_str += ",#" + i;
 		break;
@@ -140,12 +156,6 @@ function makeSquare(n)
 
         $('#bigbox').append(strA + strB + strC);
    
-        var strD = '#' + i;
-        $(strD).click(function()
-        {
-           $(strD).css("background-color", "orange");
-        });
-	
     }
 
     var pixdim = 25;
