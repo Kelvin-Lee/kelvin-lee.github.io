@@ -14,18 +14,58 @@ $(document).ready(function()
     {
 
         // Grey stack container
-	$(getNumbers([stackcontainer, stacklayers])).css("background-color", "#444444");
+	$(getNumbers([stackcontainer])).css("background-color", "#444444");
+        $(getNumbers([stacklayers])).css("background-color", "orange");
 
-	// 2 flat orange stack frames
-//        $(getNumbers([stacklayers])).css("background-color", "orange");
-
+        $(getNumbers([rect(81, 1, 4)])).css("background-color", "blue");
         
 
     });
 
 
+
 });
 
+// Returns an array of functions that can be called to evaluate
+// whether a given i is within the rectangle specified by the arguments
+// to rect()
+function rect(anchor, dimx, dimy)
+{
+   var row_of_anchor = Math.ceil(anchor / PXSIDE);
+   var col_of_anchor = (anchor % PXSIDE) ? (anchor % PXSIDE) : (PXSIDE);  
+
+   console.log(col_of_anchor);
+   var rows = Array(); 
+   var cols = Array();
+   for (var a = 0; a < dimy; a++)
+   {
+       rows.push(rowt(row_of_anchor + a));
+   }
+
+   for (var b = 0; b < dimx; b++)
+   {
+       cols.push(coll(col_of_anchor + b));
+   }
+
+   return function(i)
+   {
+       for (var j = 0; j < rows.length; j++)
+       {
+           for (var k = 0; k < cols.length; k++)
+	   {
+               if (rows[j](i) && cols[k](i))
+               {
+                   return true;
+               }
+	   }
+       }
+   }
+
+}
+
+
+// Function that returns a bool to evaluate whether a pixel of number i
+// is part of the stack container graphic.
 function stackcontainer(i)
 {
     var isSideWall = (coll(1)(i) || colr(1)(i)) && (i > PXSIDE * Math.round(PXSIDE / 2 )) 
@@ -33,34 +73,64 @@ function stackcontainer(i)
     return (isSideWall || isBottom);
 }
 
+// Function that returns a bool to evaluate whether a pixel of number i
+// is part of the stack layer graphic.
 function stacklayers(i)
 {
     var layer1 = ( rowb(3)(i) || rowb(4)(i) ) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
-  var cont =  rowb(7)(i) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
-  var bendup   = rowb(8)(i) && i % PXSIDE > coll(2)() && i % PXSIDE < coll(Math.round(PXSIDE/2))();
-  var benddown = rowb(6)(i) && i % PXSIDE < colr(2)() && i % PXSIDE >= coll(Math.round(PXSIDE/2))();
-  return layer1 || cont || bendup || benddown;
+  
+  {
+      var bend1_1 =  rowb(7)(i) && !(coll(1)(i) || coll(2)(i) || colr(1)(i) || colr(2)(i));
+      var bend1_2   = rowb(8)(i) && i % PXSIDE > coll(2)() && i % PXSIDE < coll(Math.round(PXSIDE/2))();
+      var bend1_3 = rowb(6)(i) && i % PXSIDE < colr(2)() && i % PXSIDE >= coll(Math.round(PXSIDE/2))();
+      var bend1 = (bend1_1 || bend1_2 || bend1_3);
+  }
+
+  {
+  }
+
+  return layer1 || bend1;
 }
 
 // Select nth row from top (1 = first)
+// Returns a bool if i is given and within the nth row from top
+// Else, returns a integer of the last cell in row n
 function rowt(n)
 {
     return function(i)
     {
-        return (PXSIDE * (n - 1) + 1 <= i &&  i <= n * PXSIDE);
+        if (i)
+	{
+            return (PXSIDE * (n - 1) + 1 <= i &&  i <= n * PXSIDE);
+	}
+	else
+	{
+            return (n * PXSIDE);
+	}
     }
 }
 
 // Select nth row from bottom (1 = bottom)
+// Returns a bool if i is given and within the nth row from bottom
+// Else, returns a integer of the last cell in row n
 function rowb(n)
 {
     return function(i)
     {
-        return (PXSIDE * (PXSIDE - n) + 1 <= i &&  i <= (PXSIDE - (n-1))  * PXSIDE);
+        if (i)
+	{
+            return (PXSIDE * (PXSIDE - n) + 1 <= i &&  i <= (PXSIDE - (n-1))  * PXSIDE);
+	}
+	else
+	{
+            return (PXSIDE - (n-1)) * PXSIDE;
+	}
     }
 }
 
 // Select nth col from left (1 = left-most)
+// Returns a bool if i is given and within the nth col from left
+// Else, returns the column number as an integer
 function coll(n)
 {
     return function(i)
@@ -77,6 +147,8 @@ function coll(n)
 }
 
 // Select nth col from right (1 = right-most)
+// Returns a bool if i is given and within the nth col from right
+// Else, returns the column number as an integer
 function colr(n)
 {
     return function(i)
@@ -95,7 +167,8 @@ function colr(n)
 }
 
 
-
+// Outputs string of css id selectors in the form '#' + INTEGER,
+// dependent on the functions provided to it.
 function getNumbers(a_foo)
 { 
     var upbound = TOTALPX;
@@ -118,6 +191,7 @@ function getNumbers(a_foo)
     return s_str;
 }
 
+// Produces a square of pixels of size n x n
 function makeSquare(n)
 {
     var strA = "<div class = 'mypx "
