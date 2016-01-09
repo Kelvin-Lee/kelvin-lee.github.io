@@ -41,6 +41,19 @@ $(document).ready(function()
 
     $('#GHhover').mouseover(function()
     {
+        $('.mypx').css("background-color", "#0D2636");
+        $(getNumbers([ghtriangles()])).css("background-color", "white");
+
+        $(getNumbers([ghears()])).css("background-color", "white");
+        $(getNumbers([rect(65, 12, 9)])).css("background-color", "white ");
+        $(getNumbers([rect(104, 1, 6)])).css("background-color", "white ");
+        $(getNumbers([rect(117, 1, 6)])).css("background-color", "white ");
+        $(getNumbers([rect(247, 8, 1)])).css("background-color", "white ");
+        $(getNumbers([rect(268, 6, 6)])).css("background-color", "white ");
+        $(getNumbers([rect(305, 3, 1)])).css("background-color", "white ");
+        $(getNumbers([rect(284, 1, 1)])).css("background-color", "white ");
+        $(getNumbers([rect(262, 2, 1)])).css("background-color", "white ");
+	$('#268, #273').css("background-color", "#0D2636");
 
     });
 
@@ -48,6 +61,27 @@ $(document).ready(function()
 
 
 });
+
+function ghtriangles()
+{
+    var nums = [1, 2, 3, 4, 5, 21, 22, 23, 41, 42, 61, 81, 16, 17, 18, 19, 20, 38, 39, 40, 59, 60, 80, 100, 301, 321, 341, 342, 361, 362, 363, 381, 382, 383, 384, 385, 320, 340, 359, 360, 378, 379, 380, 396, 397, 398, 399, 400];
+
+    return function(i)
+    {
+       return nums.includes(i);
+    }
+}
+
+function ghears()
+{
+    var nums = [26, 46, 47, 
+    35, 54, 55];
+    return function(i)
+    {
+        return nums.includes(i);
+    }
+
+}
 
 function li_initials()
 {
@@ -63,7 +97,8 @@ function li_initials()
 
 function li_details(i)
 {
-        if (i == 131 || i == 137 || i == 138|| i == 158 || i == 192 || i == 193 || i == 194)
+        var nums = [131, 137, 138, 158, 192, 193, 194];
+        if (nums.includes(i))
 	{
 	 return true;
 	}
@@ -83,7 +118,6 @@ function rect(anchor, dimx, dimy)
    var row_of_anchor = Math.ceil(anchor / PXSIDE);
    var col_of_anchor = (anchor % PXSIDE) ? (anchor % PXSIDE) : (PXSIDE);  
 
-   console.log(col_of_anchor);
    var rows = Array(); 
    var cols = Array();
    for (var a = 0; a < dimy; a++)
