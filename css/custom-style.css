@@ -3,7 +3,7 @@
 /* ----------------------------------------- */
 
 html{
-    background-color: #FFFFFF;
+    background-color: #000000;
     height: 80%;
     margin: 0px auto; /* centers element */
     width: 80%;
@@ -11,10 +11,10 @@ html{
   
 /* Parent   : html */
 body{
-    background-color: #FFFFFF;
+    background-color: #000000;
     margin: 0px auto; /* centers element */
     max-width: 90%;
-    padding: 5%;
+    padding: 25px;
 }
 
 /* ----------------------------------------- */
@@ -29,12 +29,10 @@ body{
 /* Parent   : #bigbox */
 .mypx{
     color: #FFFFFF;
-    height: 100px;
-    width: 100px;
     margin: 1px;
     background-color: #FFFFFF;
     float: left;
-    box-shadow: 1px 1px 0.5px grey;
+ /*   box-shadow: 1px 1px 0.5px grey; */
 }
 
 
@@ -60,8 +58,6 @@ body{
 /* Parent   : */
 #bigbox{
     background-color: inherit;
-    height: 612px;
-    width: 612px;
     margin: 0px auto; /* centers element */
 }
 
@@ -77,9 +73,14 @@ body{
 /* --------- CSS Chained Selectors --------- */
 /* ----------------------------------------- */
 
-/* Parent   : `#face` */
 #face img{
     margin: 0 auto; /* centers element */
     width: 100%;
     position: absolute;
+}
+
+#mylinks a
+{
+display: block;
+margin-left: 100px;
 }

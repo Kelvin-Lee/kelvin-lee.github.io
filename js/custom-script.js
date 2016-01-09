@@ -6,14 +6,12 @@ $(document).ready(function()
 
     makeSquare(PXSIDE);
 
-    $('#tog').click(function(){
-        $(".mypx").html('');
-    });
-
+    $('#bigbox').append('<div id = "caption" style = "color: white; font-family: Courier; font-size: 25px;"> <p> C:\\kelvinlee> Hello World! </p> </div>');
+    $('#caption').append('<div id = "mylinks"> <a id = "SOhover" href = "http://stackoverflow.com/users/5455994/kelvin-lee?tab=profile">StackOverflow</a><a id = "LIhover" href = "https://www.linkedin.com/in/kelvinklee93"> LinkedIn </a><a href = "http://github.com/kelvin-lee" id = "GHhover"> GitHub </a></div>');
     $('#SOhover').mouseover(function()
     {
 
-        $('.mypx').css("background-color", "#FFFFFF");
+        $('.mypx').css("background-color", "#444444");
         // Grey stack container
 	$(getNumbers([stackcontainer])).css("background-color", "#444444");
         
@@ -42,7 +40,7 @@ $(document).ready(function()
     $('#GHhover').mouseover(function()
     {
         $('.mypx').css("background-color", "#0D2636");
-        $(getNumbers([ghtriangles()])).css("background-color", "white");
+        $(getNumbers([ghtriangles()])).css("background-color", "#0D2636");
 
         $(getNumbers([ghears()])).css("background-color", "white");
         $(getNumbers([rect(65, 12, 9)])).css("background-color", "white ");
@@ -315,18 +313,17 @@ function makeSquare(n)
    
     }
 
-    var pixdim = 25;
+    var pixdim = 20;
     var pixdmstr = pixdim + "px"
 
     $(".mypx").css( "width", pixdmstr);
     $(".mypx").css("height", pixdmstr);
 
 
-    var dim = n * (pixdim + 2);
+    var dim = n * (pixdim + 2) + 2;
     var dimstr = dim + "px";
     $('#bigbox').css( "width", dimstr);
     $('#bigbox').css("height", dimstr);
-
 
 };
 
