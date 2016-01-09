@@ -13,6 +13,7 @@ $(document).ready(function()
     $('#SOhover').mouseover(function()
     {
 
+        $('.mypx').css("background-color", "#FFFFFF");
         // Grey stack container
 	$(getNumbers([stackcontainer])).css("background-color", "#444444");
         
@@ -29,14 +30,50 @@ $(document).ready(function()
         $(getNumbers([rect(156, 3, 2)])).css("background-color", "orange");
     });
 
+    $('#LIhover').mouseover(function()
+    {
+        $('.mypx').css("background-color", "#0077B5");
+        $(getNumbers(li_initials())).css("background-color", "white");
+	$(getNumbers([li_details])).css("background-color", "#0077B5");
+
+
+    });
+
+    $('#GHhover').mouseover(function()
+    {
+
+    });
+
+
 
 
 });
 
-function all(i)
+function li_initials()
 {
-return true;
-} 
+    var foos = Array();
+    foos.push(rect(43, 3, 3));
+    foos.push(rect(123,3,12));
+    foos.push(rect(128,3,12));
+    foos.push(rect(176,3,10));
+    foos.push(rect(128,11,4));
+    return foos;
+
+}
+
+function li_details(i)
+{
+        if (i == 131 || i == 137 || i == 138|| i == 158 || i == 192 || i == 193 || i == 194)
+	{
+	 return true;
+	}
+	else
+	{
+
+	return false;
+	}
+}
+
 
 // Returns an array of functions that can be called to evaluate
 // whether a given i is within the rectangle specified by the arguments
@@ -216,8 +253,8 @@ function makeSquare(n)
 	var isRSide = (i % n == 0)
 
         var strB = ""
-	var strC  = "' id = '" + i + "'>" +  i + "</div>"
-	//var strC  = "' id = '" + i + "'>" + "</div>"
+	//var strC  = "' id = '" + i + "'>" +  i + "</div>"
+	var strC  = "' id = '" + i + "'>" + "</div>"
 
     	if (isTop || isBottom || isLSide || isRSide)
 	{
