@@ -1,48 +1,86 @@
+/* ----------------------------------------- */
+/* ---------- HTML RESERVED TAGS ----------- */
+/* ----------------------------------------- */
+
 html{
-	background-color: #000000;
-	height: 100%;
-	width: 100%;
+    background-color: #000000;
+    height: 80%;
+    margin: 0px auto; /* centers element */
+    width: 80%;
 }
   
-/* Parent element   : html */
+/* Parent   : html */
 body{
-	background-color: #AAAAAA;
-	margin: 0px auto; /* centers element */
-	max-width: 90%;
-	padding: 5%;
+    background-color: #000000;
+    margin: 0px auto; /* centers element */
+    max-width: 90%;
+    padding: 25px;
 }
 
-/* Parent element   : body */
-#above-shoulders{
-	margin: 0px auto; /* centers element */
-	width: 50%;
-}
+/* ----------------------------------------- */
+/* -------------- CSS Classes -------------- */
+/* ----------------------------------------- */
 
-
-/* Parent element   : body */
-#banner{
-	display: block;
-	font-family: "Courier New";
-	color: #FFFFFF;
-	margin: 0 auto; /* centers element */
-	text-align: center;
-}
-
-/* Parent element   : .btn-group */
+/* Parent   : .btn-group */
 .btn{
-	font-family: "Courier New";
+    font-family: "Courier New";
+}
+
+/* Parent   : #bigbox */
+.mypx{
+    color: #FFFFFF;
+    margin: 1px;
+    background-color: #FFFFFF;
+    float: left;
+ /*   box-shadow: 1px 1px 0.5px grey; */
+}
+
+
+/* ----------------------------------------- */
+/* ---------------- CSS IDs ---------------- */
+/* ----------------------------------------- */
+
+/* Parent   : body */
+#above-shoulders{
+    margin: 0px auto; /* centers element */
+    width: 50%;
+}
+
+/* Parent   : body */
+#banner{
+    display: block;
+    font-family: "Courier New";
+    color: #FFFFFF;
+    margin: 0 auto; /* centers element */
+    text-align: center;
+}
+
+/* Parent   : */
+#bigbox{
+    background-color: inherit;
+    margin: 0px auto; /* centers element */
 }
 
 #face {
-	width: 500px;
-	height: 500px;
-	margin: 0px auto;
-	position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0px auto;
+    position: relative;
 }
 
-/* Parent element   : `#face` */
+
+/* ----------------------------------------- */
+/* --------- CSS Chained Selectors --------- */
+/* ----------------------------------------- */
+
 #face img{
-	margin: 0 auto; /* centers element */
-	width: 100%;
-	position: absolute;
+    margin: 0 auto; /* centers element */
+    width: 100%;
+    position: absolute;
+}
+
+#mylinks a
+{
+display: block;
+margin-left: 100px;
 }
