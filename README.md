@@ -7,4 +7,7 @@ Current version does not actually use any of the files in the `/images` director
 It was fun practice in using `jQuery`, `javascript`, and not so fun practice in trying to center `<div>`s in `html` and `css`, but I am happy with how far I've gotten thus far.
 
 Hope you like it!
-- Kelvin Lee
+
+
+*Kelvin Lee*
+*kklee@ucdavis.edu*
