@@ -4,9 +4,11 @@ Hello world! This is my website. The purpose of this website is to help employer
 
 Current version does not actually use any of the files in the `/images` directory, nor does it utilize any `bootstrap`. Both the directory and the inclusion of `bootstrap` are relics of older designs.
 
-It was fun practice in using `jQuery`, `javascript`, and not so fun practice in trying to center `<div>`s in `html` and `css`, but I am happy with how far I've gotten thus far.
+It was fun practice in using `jQuery`, `javascript`, and not so fun practice in trying to center `<div>`s in `html` and `css`, but I am happy with how far I've gotten thus far. 
 
-Hope you like it!
+As long as there are still `issues` in this repository, then this website will be a work in progress.
+
+Hope you like it (so far)!
 
 
 *Kelvin Lee*
