@@ -248,6 +248,7 @@ function getNumbers(a_foo)
 // Produces a square of pixels of size n x n
 function makeSquare(n)
 {
+    var bigstr = "";
     var strA = "<div class = 'mypx "
 
     for (var i = 1; i <= n*n; i++)
@@ -258,7 +259,6 @@ function makeSquare(n)
 	var isRSide = (i % n == 0)
 
         var strB = ""
-	//var strC  = "' id = '" + i + "'>" +  i + "</div>"
 	var strC  = "' id = '" + i + "'>" + "</div>"
 
     	if (isTop || isBottom || isLSide || isRSide)
@@ -281,10 +281,11 @@ function makeSquare(n)
             strB += "bottom ";
 	}
 
-
-        $('#bigbox').append(strA + strB + strC);
+        bigstr += strA + strC;
    
     }
+
+    $('#bigbox').append(bigstr);
 
     var pixdim = 20;
     var pixdmstr = pixdim + "px"
