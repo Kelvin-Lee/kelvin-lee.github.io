@@ -101,9 +101,12 @@ function rect(anchor, dimx, dimy)
 
    return function(i)
    {
-       for (var j = 0; j < rows.length; j++)
+       var len_row = rows.length;
+       var len_cols = cols.length;
+
+       for (var j = 0; j < len_rows; j++)
        {
-           for (var k = 0; k < cols.length; k++)
+           for (var k = 0; k < len_cols; k++)
 	   {
                if (rows[j](i) && cols[k](i))
                {
@@ -225,9 +228,10 @@ function getNumbers(a_foo)
 { 
     var upbound = TOTALPX;
     var s_str = "";
+    var len_foo = a_foo.length;
     for (var i = 1; i <= upbound; i++)
     {
-        for (var j = 0; j < a_foo.length; j++)
+        for (var j = 0; j < len_foo; j++)
 	{
             if (a_foo[j](i))
 	    {
@@ -248,8 +252,8 @@ function makeSquare(n)
 {
     var bigstr = "";
     var strA = "<div class = 'mypx "
-
-    for (var i = 1; i <= n*n; i++)
+    var totaldim = n*n;
+    for (var i = 1; i <= totaldim; i++)
     {
     	var isTop = (i <= n);
 	var isBottom = (i > n * (n-1));
