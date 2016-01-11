@@ -10,53 +10,25 @@ $(document).ready(function()
     $('#caption').append('<div id = "mylinks"> <a id = "SOhover" href = "http://stackoverflow.com/users/5455994/kelvin-lee?tab=profile">StackOverflow</a><a id = "LIhover" href = "https://www.linkedin.com/in/kelvinklee93"> LinkedIn </a><a href = "http://github.com/kelvin-lee" id = "GHhover"> GitHub </a></div>');
     $('#SOhover').mouseover(function()
     {
+        //$('.mypx').css("background-color", "#444444");
+        $('.mypx').stop().css("background-color", "#444444");
+        $("#27,#28,#29,#47,#48,#49,#70,#71,#72,#90,#91,#92,#113,#114,#115,#133,#134,#135,#143,#144,#145,#146,#156,#157,#158,#163,#164,#165,#166,#167,#168,#169,#170,#176,#177,#178,#187,#188,#189,#190,#191,#192,#193,#194,#211,#212,#213,#214,#215,#216,#217,#218,#235,#236,#237,#238,#243,#244,#245,#246,#247,#248,#249,#263,#264,#265,#266,#267,#268,#269,#270,#271,#272,#273,#274,#275,#276,#277,#278,#290,#291,#292,#293,#294,#295,#296,#297,#298,#323,#324,#325,#326,#327,#328,#329,#330,#331,#332,#333,#334,#335,#336,#337,#338,#343,#344,#345,#346,#347,#348,#349,#350,#351,#352,#353,#354,#355,#356,#357,#358").stop().animate({backgroundColor: "orange"}, {duration: 500, queue: false});
 
-        $('.mypx').css("background-color", "#444444");
-        // Grey stack container
-	$(getNumbers([stackcontainer])).css("background-color", "#444444");
-        
-	$(getNumbers([stacklayers])).css("background-color", "orange");
-        
-	$(getNumbers([rect(143, 4 , 2)])).css("background-color", "orange");
-        $(getNumbers([rect(167, 4, 2)])).css("background-color", "orange");
-        $(getNumbers([rect(191, 4, 2)])).css("background-color", "orange");
-        $(getNumbers([rect(215, 4, 2)])).css("background-color", "orange");
-
-        $(getNumbers([rect(27, 3, 2)])).css("background-color", "orange");
-        $(getNumbers([rect(70, 3, 2)])).css("background-color", "orange");
-        $(getNumbers([rect(113, 3, 2)])).css("background-color", "orange");
-        $(getNumbers([rect(156, 3, 2)])).css("background-color", "orange");
     });
 
     $('#LIhover').mouseover(function()
     {
-        $('.mypx').css("background-color", "#0077B5");
-        $(getNumbers(li_initials())).css("background-color", "white");
-	$(getNumbers([li_details])).css("background-color", "#0077B5");
-
-
+        $('.mypx').stop().css("background-color", "#0077B5");
+        $("#43,#44,#45,#63,#64,#65,#83,#84,#85,#123,#124,#125,#128,#129,#130,#132,#133,#134,#135,#136,#143,#144,#145,#148,#149,#150,#151,#152,#153,#154,#155,#156,#157,#163,#164,#165,#168,#169,#170,#171,#172,#173,#174,#175,#176,#177,#178,#183,#184,#185,#188,#189,#190,#191,#195,#196,#197,#198,#203,#204,#205,#208,#209,#210,#216,#217,#218,#223,#224,#225,#228,#229,#230,#236,#237,#238,#243,#244,#245,#248,#249,#250,#256,#257,#258,#263,#264,#265,#268,#269,#270,#276,#277,#278,#283,#284,#285,#288,#289,#290,#296,#297,#298,#303,#304,#305,#308,#309,#310,#316,#317,#318,#323,#324,#325,#328,#329,#330,#336,#337,#338,#343,#344,#345,#348,#349,#350,#356,#357,#358").stop().animate({backgroundColor: "white"}, {duration: 500, queue: false});
     });
 
     $('#GHhover').mouseover(function()
     {
-        $('.mypx').css("background-color", "#0D2636");
-        $(getNumbers([ghtriangles()])).css("background-color", "#0D2636");
+        $('.mypx').stop().css("background-color", "#0D2636");
 
-        $(getNumbers([ghears()])).css("background-color", "white");
-        $(getNumbers([rect(65, 12, 9)])).css("background-color", "white ");
-        $(getNumbers([rect(104, 1, 6)])).css("background-color", "white ");
-        $(getNumbers([rect(117, 1, 6)])).css("background-color", "white ");
-        $(getNumbers([rect(247, 8, 1)])).css("background-color", "white ");
-        $(getNumbers([rect(268, 6, 6)])).css("background-color", "white ");
-        $(getNumbers([rect(305, 3, 1)])).css("background-color", "white ");
-        $(getNumbers([rect(284, 1, 1)])).css("background-color", "white ");
-        $(getNumbers([rect(262, 2, 1)])).css("background-color", "white ");
-	$('#268, #273').css("background-color", "#0D2636");
+$("#26,#35,#46,#47,#54,#55,#65,#66,#67,#68,#69,#70,#71,#72,#73,#74,#75,#76,#85,#86,#87,#88,#89,#90,#91,#92,#93,#94,#95,#96,#104,#105,#106,#107,#108,#109,#110,#111,#112,#113,#114,#115,#116,#117,#124,#125,#126,#127,#128,#129,#130,#131,#132,#133,#134,#135,#136,#137,#144,#145,#146,#147,#148,#149,#150,#151,#152,#153,#154,#155,#156,#157,#164,#165,#166,#167,#168,#169,#170,#171,#172,#173,#174,#175,#176,#177,#184,#185,#186,#187,#188,#189,#190,#191,#192,#193,#194,#195,#196,#197,#204,#205,#206,#207,#208,#209,#210,#211,#212,#213,#214,#215,#216,#217,#225,#226,#227,#228,#229,#230,#231,#232,#233,#234,#235,#236,#247,#248,#249,#250,#251,#252,#253,#254,#262,#263,#269,#270,#271,#272,#284,#288,#289,#290,#291,#292,#293,#305,#306,#307,#308,#309,#310,#311,#312,#313,#328,#329,#330,#331,#332,#333,#348,#349,#350,#351,#352,#353,#368,#369,#370,#371,#372,#373").stop().animate({backgroundColor: "white"}, {duration: 500, queue: false});
 
     });
-
-
-
 
 });
 
@@ -90,6 +62,7 @@ function li_initials()
     foos.push(rect(176,3,10));
     foos.push(rect(128,11,4));
     return foos;
+
 
 }
 
@@ -326,4 +299,3 @@ function makeSquare(n)
     $('#bigbox').css("height", dimstr);
 
 };
-
