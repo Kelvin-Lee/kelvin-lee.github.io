@@ -81,6 +81,13 @@ body{
 
 #mylinks a
 {
-display: block;
-margin-left: 100px;
+color: white;
+font-family: Courier;
+font-size: 25px;
+display: inline-block
+}
+
+body > div
+{
+margin: 0px auto;
 }
