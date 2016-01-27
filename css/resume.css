@@ -1,0 +1,60 @@
+/* background color */
+/* default font-family */
+/* default font-color */
+/* <body> left-right padding */
+/* <body> top padding */
+/* #dogear width-height */
+html {
+  background-color: #402010;
+  color: #000000;
+  font-family: Helvetica; }
+  html body {
+    color: #000000;
+    margin: 30px auto;
+    width: 60%;
+    position: relative;
+    padding: 15px 100px 25px 100px;
+    background-color: #FFFFFF;
+    z-index: 0; }
+    html body .postit {
+      height: 240px;
+      width: 240px;
+      padding: 10px;
+      position: absolute;
+      left: -290px;
+      top: -290px;
+      z-index: 3;
+      transform: rotate(-10deg); }
+    html body #dogear {
+      width: 0px;
+      height: 0px;
+      border-right: 80px solid #aaaaee;
+      border-top: 80px solid transparent;
+      display: transparent;
+      position: absolute;
+      margin-top: -15px;
+      margin-left: -100px;
+      background-color: transparent;
+      z-index: 2; }
+    html body #grid {
+      left: 0px;
+      top: 0px;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      background-color: #4444CC;
+      background-image: url("../images/whitegridlines_small.png");
+      z-index: 1; }
+
+.duration, .detail {
+  font-size: small;
+  font-style: italic;
+  margin-left: 1em; }
+
+#todo {
+  background-color: #FFCC00; }
+
+#howitsdone {
+  background-color: #88FF88; }
+
+/*# sourceMappingURL=resume.css.map */
