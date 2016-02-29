@@ -16,7 +16,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <link rel = "stylesheet" href = "./css/appendix.css"></link>
+  <link rel = "stylesheet" href = "./css/index.css"></link>
 </head>
 
 <body>
@@ -25,8 +25,9 @@
     <div class="wrap container">
       <div class="row">
         <h1>Hello!</h1>
-        <p> My name is Kelvin Lee, and I graduated from UCDavis in the Spring of 2015. I am currently interested in a position as a <b>front-end web developer</b>, while leveraging my <b>B.S. in Computer Science</b> to work closely with back-end engineers.</p>
-	<img src="./images/me.png">
+	<div class="description">
+          <p> My name is Kelvin Lee, and I graduated from UCDavis in the Spring of 2015. I am currently interested in a position as a <b>front-end web developer</b>, while leveraging my <b>B.S. in Computer Science</b> to work closely with back-end engineers.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -36,43 +37,52 @@
       <div class="row">
       <h2>Experience</h2>
       
-        <div id="experience1" class="col-md-4 experience module">
+        <div id="experience1" class="col-md-4">
+	  <div class="experience module">
           <h3>A Website</h3>
-          <div id="experience1-graphic" class="graphic"><img src="./images/webpage.png"></div>
+          <div id="experience1-graphic" class="graphic"><img src="./images/computer.png"></div>
           <div id="experience1-description" class="description">
             <p>Currently working on a team of three on a website, using <b>HTML/CSS</b>, plenty of <b>Javascript</b>, and <b>jQuery/AJAX</b>. We use <b>Git</b> to collaborate. More information and my reflections can be read <a href="link">here</a>.</p>
           </div>
+	  </div>
         </div>
 
-        <div id="experience2" class="col-md-4 experience module">
+        <div id="experience2" class="col-md-4">
+	  <div class="experience module">
           <h3>My Website</h3>
-          <div id="experience2-graphic" class="graphic"><img src="./images/glasses2.png"></div>
+          <div id="experience2-graphic" class="graphic"><img src="./images/profile.png"></div>
           <div id="experience2-description" class="description">
             <p>This is where you are right now. I've been practicing design and exercising creativity, using <b>Bootstrap</b>, as well as <b>GimpShop</b>. I've went through a couple of iterations, screenshots of which you can see <a href="link">here</a> and <a href="link">here</a></p>
           </div>
+	  </div>
         </div>
 
-        <div id="experience3" class="col-md-4 experience module">
+        <div id="experience3" class="col-md-4">
+	  <div class="experience module">
           <h3>Community</h3>
-          <div id="experience3-graphic" class="graphic"><img src="./images/hands.png"></div>
+          <div id="experience3-graphic" class="graphic"><img src="./images/heart.png"></div>
           <div id="experience3-description" class="description">
             <p>As a member to a service organization, I provided <b>150+ hrs.</b> of community service to various causes. I was also a <b>group trainer</b> in a team of three, tasked with the orientation process for new members.</p>
           </div>
+	  </div>
         </div>
 
       </div>
+      <!--
       <div class="more-bar"><button type="button" class="btn btn-default">More/Less</button></div>
       <div id="more-experiences" class="row">
 
         <div id="experience5" class="col-md-4 experience module">
           <h3>Physical Therapy Assitant</h3>
-          <div id="experience5-graphic" class="graphic"><img src="./images/therapy.png"></div>
+          <div id="experience5-graphic" class="graphic"><img src="./images/briefcase.png"></div>
           <div id="experience5-description" class="description">
             <p>I worked briefly at a physical therapy clinic, where I worked with a <b>all ages</b> to provide quality healthcare. The most challenging part was <b>quickly learning</b> and <b>adapting</b> outside of my academic discipline and comfort zone.</p>
           </div>
         </div>
 
       </div>
+
+      -->
 
     </div>
   </div><!--experiences-->
@@ -82,37 +92,49 @@
       <h2>Skills and Attributes</h2>
 
       <div class="col-md-4">
+        <div class="skill module"> 
         <h3>Technical</h3>
-        <ul> 
-          <li>Javascript</li>
-          <li>HTML/CSS</li>
-          <li>jQuery/AJAX</li>
-          <li>Git</li>
-          <li>C++</li>
-          <li>GimpShop</li>
-          <li>O.O.P.</li>
-          <li>Advanced Data Structures</li>
-        </ul>
+	<div class="description">
+          <ul> 
+            <li>Javascript</li>
+            <li>HTML/CSS</li>
+            <li>jQuery/AJAX</li>
+            <li>Git</li>
+            <li>C++</li>
+            <li>GimpShop</li>
+            <li>O.O.P.</li>
+            <li>Advanced Data Structures</li>
+          </ul>
+	</div>
+	</div>
       </div>
       
       <div class="col-md-4">
+        <div class="skill module"> 
         <h3>Qualities</h3>
-        <ul>
-          <li>Effective team member</li>
-          <li>Fast and curious learner</li>
-          <li>Eager to provide high-integrity work</li>
-          <li>Thoughtful written communicator</li>
-        </ul>
+	<div class="description">
+          <ul>
+            <li>Effective team member</li>
+            <li>Fast and curious learner</li>
+            <li>Eager to provide high-integrity work</li>
+            <li>Thoughtful written communicator</li>
+          </ul>
+	</div>
+	</div>
       </div>
       
       <div class="col-md-4">
+        <div class="skill module"> 
         <h3>I am familiar with...</h3>
-        <ul>
-          <li>Grunt.js</li>
-          <li>Node.js</li>
-          <li>MongoDB</li>
-          <li>SASS</li>
-        </ul>
+	<div class="description">
+          <ul>
+            <li>Grunt.js</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>SASS</li>
+          </ul>
+	</div>
+	</div>
       </div>
 
     </div>
@@ -123,19 +145,28 @@
       <h2>Future</h2>
       <div class="row">
 
-        <div id="goal1" class="col-md-4 goal module">
-          <div id="goal1-graphic" class="graphic"><img src="./images/tree.png"></div>
-          <div id="goal1-description" class="description"><p>I imagine that one day I will be working at a place that supports <b>environment sustainability</b>, or pursues some other <b>philanthropic causes</b>. It will definitely be important to me that my work is making the world a better place.</p></div>
+        <div id="goal1" class="col-md-4">
+	  <div class="goal module">
+	  <h3>Agenda</h3>
+          <div id="goal1-graphic" class="graphic"><img src="./images/earth-globe.png"></div>
+          <div id="goal1-description" class="description"><p>I imagine that one day I will be working at a place that supports <b>philanthropic causes</b>, or maybe works towards <b>a greener environment</b>. It will definitely be important to me that my work is making the world a better place.</p></div>
+	  </div>
         </div>
 	
-        <div id="goal2" class="col-md-4 goal module">
-          <div id="goal2-graphic" class="graphic"><img src="./images/graph.png"></div>
+        <div id="goal2" class="col-md-4">
+	  <div class="goal module">
+	  <h3>Learning</h3>
+          <div id="goal2-graphic" class="graphic"><img src="./images/computer-mouse.png"></div>
           <div id="goal2-description" class="description"><p>I'd eventually like to work with visualization or graphics libraries, such as <b>D3.js</b>, <b>Processing</b>, <b>Tween.js</b>, and <b>three.js</b>. If I'm not producing art with code, I could instead be learning <b>After Effects</b> or <b>Photoshop</b></p></div>
+	  </div>
         </div>
 
-        <div id="goal3" class="col-md-4 goal module">
+        <div id="goal3" class="col-md-4">
+	  <div class="goal module">
+	  <h3>Teaching</h3>
           <div id="goal3-graphic" class="graphic"><img src="./images/book.png"></div>
           <div id="goal3-description" class="description"><p>Learning so many new things has been a difficult but exciting adventure; I hope to give back through <b>education</b> at some point in my career, either by providing <b>training</b> for colleagues, or through <b>web-based</b> resources.</p></div>
+	  </div>
         </div>
 
       </div><!--row-->
@@ -166,7 +197,7 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./jquery-color/jquery.color.js"></script>
 <script src="./jquery-color/jquery.color.svg-names.js"></script>
-<script src="./js/appendix.js"></script>
+<script src="./js/index.js"></script>
 </body>
 
 </html>
