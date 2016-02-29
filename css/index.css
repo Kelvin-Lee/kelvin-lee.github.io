@@ -1,31 +1,70 @@
-html {
-  background-color: #000000;
-  height: 80%;
+html, body {
+  font-family: sans-serif; }
+
+h1, h2, h3 {
+  color: #FFF;
+  text-align: center; }
+
+.wrap {
+  max-width: 800px;
   margin: 0px auto;
-  width: 80%; }
-  html body {
-    background-color: #000000;
+  padding: 30px; }
+
+#intro {
+  background-color: #C33;
+  color: #000;
+  text-align: center; }
+  #intro img {
+    max-height: 50%;
+    max-width: 50%; }
+
+#experiences {
+  background-color: #3A3;
+  color: #000; }
+
+#skills {
+  background-color: #333;
+  color: #000; }
+  #skills .description {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 0px;
+    padding-top: 10px; }
+
+#goals {
+  background-color: #3AA;
+  color: #000; }
+
+#thanks {
+  background-color: #C33;
+  color: #FFF; }
+  #thanks a:link {
+    color: #EA2; }
+
+.graphic {
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  padding: 10px; }
+  .graphic img {
     margin: 0px auto;
-    max-width: 90%;
-    padding: 25px; }
+    max-height: 110px;
+    max-width: 110px;
+    filter: invert(100%); }
 
-.mypx {
-  color: #FFFFFF;
-  margin: 1px;
-  background-color: #FFFFFF;
-  float: left; }
+.description {
+  background-color: #FFF;
+  color: #000;
+  width: auto;
+  padding: 1em 1em 5px 1em;
+  border-radius: 10px; }
 
-#bigbox {
-  background-color: #000000;
-  margin: 0px auto; }
+.module {
+  border: 3px solid #FFF;
+  border-radius: 10px;
+  padding: 15px 5px 5px 5px; }
+  .module > * {
+    margin: 0px auto;
+    text-align: center; }
 
-#mylinks a {
-  color: white;
-  font-family: Courier;
-  font-size: 25px;
-  display: inline-block; }
-
-body > div {
-  margin: 0px auto; }
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=appendix.css.map */
