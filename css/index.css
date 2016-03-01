@@ -3,7 +3,8 @@ html, body {
 
 h1, h2, h3 {
   color: #FFF;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 10px; }
 
 .wrap {
   max-width: 800px;
@@ -19,7 +20,7 @@ h1, h2, h3 {
     max-width: 50%; }
 
 #experiences {
-  background-color: #3A3;
+  background-color: #393;
   color: #000; }
 
 #skills {
@@ -62,9 +63,10 @@ h1, h2, h3 {
 .module {
   border: 3px solid #FFF;
   border-radius: 10px;
-  padding: 15px 5px 5px 5px; }
+  padding: 15px 5px 5px 5px;
+  margin-bottom: 5px; }
   .module > * {
     margin: 0px auto;
     text-align: center; }
 
-/*# sourceMappingURL=appendix.css.map */
+/*# sourceMappingURL=index.css.map */
