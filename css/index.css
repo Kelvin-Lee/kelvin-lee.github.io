@@ -1,10 +1,16 @@
 html, body {
   font-family: sans-serif; }
 
-h1, h2, h3 {
+h1, h2, h3, h5 {
   color: #FFF;
   text-align: center;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-decoration: underline; }
+
+h5 {
+  color: #FFF;
+  font-style: italic;
+  text-decoration: none; }
 
 .wrap {
   max-width: 800px;
@@ -38,7 +44,8 @@ h1, h2, h3 {
 
 #thanks {
   background-color: #C33;
-  color: #FFF; }
+  color: #FFF;
+  text-align: center; }
   #thanks a:link {
     color: #EA2; }
 
@@ -64,9 +71,22 @@ h1, h2, h3 {
   border: 3px solid #FFF;
   border-radius: 10px;
   padding: 15px 5px 5px 5px;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
   .module > * {
     margin: 0px auto;
     text-align: center; }
+
+.modal-content img {
+  display: block;
+  margin: 0px auto;
+  max-height: 300px;
+  max-width: 300px; }
+
+#group .modal-content {
+  text-align: center; }
+
+#acknowledgement {
+  text-align: center;
+  font-style: italic; }
 
 /*# sourceMappingURL=index.css.map */

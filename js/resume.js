@@ -1,81 +1,109 @@
 
 var jq_body = $('body'),
-    jq_dogear = $('#dogear'),
     jq_grid = $('#grid'),
     jq_resume = $('#resume'),
     jq_how = $('#howitsdone'),
-    jq_todo = $('#todo');
     is_peeled_off = false;
 
+
+var postit = (function(){
+
+    return {
+
+	aIn: function(t){
+            jq_how.stop().animate({           /* 1 */
+                'top': '150px',
+                'left': '-150px'
+            } , {
+                duration: t,
+                queue: false,
+	        easing: 'easeOutCubic'
+            });
+	},
+
+        aOut: function(t){
+            jq_how.stop(t).animate({           /* 1 */
+                'top': '-350px',
+                'left': '-250px'
+            } , {
+                duration: t,
+                queue: false,
+                easing: 'easeInQuint' 
+            });
+	}
+
+    }
+
+})();
+
+
+var ddogear = (function(){ 
+
+    var jq_dogear = $('#dogear');
+
+    return {
+
+        aIn: function(w, h, t){
+            jq_dogear.stop().animate({
+                'border-right-width': w, //s_dogear_neww
+                'border-top-width': h    //s_dogear_newh
+            } , {
+                duration: t,
+                queue: false,
+	        easing: 'easeInOutExpo'
+            });
+	},
+  
+        aOut: function(t){
+            jq_dogear.stop().animate({ 
+                'border-right-width': '80px',
+                'border-top-width': '80px' 
+            } , {
+                duration: t,
+                queue: false,
+	        easing: 'easeInOutExpo'
+            });
+	},
+
+    }
+
+})();
 
 $(document).ready(function (){
 
     $('#dogear').click(function (){
 
         if (is_peeled_off) {
-            reset_peel();
+            AniOut();
 	    is_peeled_off = false;
         } else {
             peeloff();
 	    is_peeled_off = true;
         }
     });
+
+    $('.lang').prepend('<div></div>');
+    $('.tool').prepend('<div></div>');
+    $('.misc').prepend('<div></div>');
 });
 
-function reset_peel(){
+function AniOut(){
 
        var ani_time = 1500;
 
        // Reset fold
-       jq_dogear.stop().animate({
-           'border-right-width': '80px',
-           'border-top-width': '80px' 
-       }, {
-           duration: ani_time,
-           queue: false,
-	   easing: 'easeInOutExpo',
-	   complete: function(){
-	   /*
-               jq_dogear.stop().animate({
-                   'width': 0,
-		   'height': 0
-               }, {
-                   duration: ani_time,
-                   queue: false,
-		   easing: 'linear'
-               }); 
-           */
-           }
-       });
-	       
-       jq_how.stop().animate({
-           'top': '-350px',
-           'left': '-250px'
-       }, {
-           duration: ani_time,
-           queue: false,
-           easing: 'easeInQuint'
-       });
+       ddogear.aOut(ani_time);
+       postit.aOut(ani_time);
 
-       jq_todo.stop().animate({
-           'top': '-350px',
-           'left': '-250px'
-       }, {
-           duration: ani_time,
-	   queue: false,
-	   easing: 'easeInQuint'
-       });
-
-	       
        // Reducing
-       jq_grid.stop().animate({
+       jq_grid.stop().animate({           /* 1 */
            'height': '80px',
            'width' : '80px' 
        }, {
            duration: ani_time,
            queue: false,
 	   easing: 'easeInOutExpo',
-	   complete: function() {
+	   complete: function() {           /* 1 */
                jq_resume.css({
                    'color' : 'black',       
                    'opacity': '0',
@@ -140,29 +168,10 @@ function peeloff()
        // Animate the dogear 'folding', and expand the grid to match.
 
        // Folding
-       jq_dogear.stop().animate({
-           'border-right-width': s_dogear_neww,
-           'border-top-width': s_dogear_newh
-       }, {
-           duration: ani_time,
-           queue: false,
-	   easing: 'easeInOutExpo',
-	   complete: function(){
-	   /*
-               jq_dogear.stop().animate({
-                   'width': 0,
-		   'height': 0
-               }, {
-                   duration: ani_time,
-                   queue: false,
-		   easing: 'linear'
-               }); 
-           */
-           }
-       });
+       ddogear.aIn(s_dogear_neww, s_dogear_newh, ani_time);
 
        // Expanding
-       jq_grid.stop().animate({
+       jq_grid.stop().animate({           /* 1 */
            'height': s_grid_newh,
            'width' : s_grid_neww
        }, {
@@ -177,7 +186,7 @@ function peeloff()
                    'z-index': '1'
                });
 
-	       jq_resume.stop().animate({
+	       jq_resume.stop().animate({           /* 1 */
                    'opacity': '0.5'
                }, {
                    duration: ani_time,
@@ -185,23 +194,7 @@ function peeloff()
 		   easing: 'swing'
                });
 
-	       jq_how.stop().animate({
-                   'top': '150px',
-                   'left': '-150px'
-               }, {
-                   duration: ani_time,
-                   queue: false,
-		   easing: 'easeOutCubic'
-               });
-
-	       jq_todo.stop().animate({
-                   'top': '350px',
-                   'left': '-150px'
-               }, {
-                   duration: ani_time,
-                   queue: false,
-		   easing: 'easeOutCubic'
-               });
+               postit.aIn(ani_time); 
 
 	       var tempw = (n_grid_neww / n_bodyw) * 100;
 	       console.log(tempw);
