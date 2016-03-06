@@ -57,8 +57,7 @@ h5 {
   .graphic img {
     margin: 0px auto;
     max-height: 110px;
-    max-width: 110px;
-    filter: invert(100%); }
+    max-width: 110px; }
 
 .description {
   background-color: #FFF;
@@ -88,5 +87,8 @@ h5 {
 #acknowledgement {
   text-align: center;
   font-style: italic; }
+
+#more-bar {
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
