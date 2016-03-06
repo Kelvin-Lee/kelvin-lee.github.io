@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; -->
+  <!-- any other head content must come *after* these tags  -->
+  <title> Kelvin Lee </title>
+  <!-- Bootstrap -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> 
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel = "stylesheet" href = "./css/index.css"></link>
+</head>
+
+<body>
+
+  <div id="intro">
+    <div class="wrap container">
+      <div class="row">
+        <h1>Hello!</h1>
+	<div class="description">
+          <p> My name is <b>Kelvin Lee</b>, and I graduated from UCDavis in the Spring of 2015. I am currently looking to leverage my <b>B.S. in Computer Science</b>, with a particular interest in <b>front-end web developement</b>, or data-visualisations. Ultimately, I'm looking to be productive, to learn new things, and to make new connections.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="website-gif" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="./images/website-comp.gif">
+	  <p>I use the <b>Google Maps API</b> to find nursing facilities nearby to a user-queried location. The user can sort and filter the results with the options section.</p>
+	  <p>Our team uses <b>MongoDB and Mongoose</b> to store information on each facility. We also had to work with <b>AJAX</b> calls to get the information from the Medicare website.</p>
+	  <p>My favorite part of working on this page was using <em>closures</em> to control the buttons, something I had never seen before in CPP.</p>
+	</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div id="iteration1" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="./images/resume-comp.gif">
+	  <p>The page is just a web version of my resume. I added a dogear that, when clicked, displays a "sticky note" listing the tools used to make the page.</p>
+	</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div id="iteration2" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="./images/pixel-comp.gif">
+	  <p>I wanted a more interesting way to display some links. It requires the <b>jQuery UI</b> plugin for the color transitions on the <code>div</code> tags.</p>
+	</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div id="group" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="./images/firstday-min.jpg">
+	  <p>First day.</p>
+          <img src="./images/chickentenders-min.jpg">
+	  <p>Affectionately called the "Chicken 10-ders".</p>
+          <img src="./images/grownup-min.jpg">
+	  <p>All grown up.</p>
+	</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div id="experiences">
+    <div class="wrap container">
+      <div class="row">
+      <h2>Experience</h2>
+      
+        <div id="experience1" class="col-md-4">
+	  <div class="experience module">
+          <h3>A Website</h3>
+	  <h5>Nov. 2015 - Present</h5>
+          <div id="experience1-graphic" class="graphic"><img src="./images/computer.png"></div>
+          <div id="experience1-description" class="description">
+            <p>Currently working on a team of three on a website, using <b>HTML/CSS</b>, plenty of <b>Javascript</b>, and <b>jQuery/AJAX</b>. We use <b>Git</b> to collaborate. Here's a <a data-toggle="modal" data-target="#website-gif">.gif</a> of my work, as well as some additional technical information.</p></div>
+	  </div>
+        </div>
+
+        <div id="experience2" class="col-md-4">
+	  <div class="experience module">
+          <h3>My Website</h3>
+	  <h5>Nov. 2015 - Present</h5>
+          <div id="experience2-graphic" class="graphic"><img src="./images/profile.png"></div>
+          <div id="experience2-description" class="description">
+            <p>This is where you are right now. I've been practicing design and exercising creativity, using <b>Bootstrap</b>, as well as <b>GimpShop</b>. I've went through a couple of versions, .gifs of which you can see <a data-toggle="modal" data-target="#iteration1">here</a> and <a data-toggle="modal" data-target="#iteration2">here</a>.</p>
+          </div>
+	  </div>
+        </div>
+
+        <div id="experience3" class="col-md-4">
+	  <div class="experience module">
+          <h3>Community</h3>
+	  <h5>2013 - 2015</h5>
+          <div id="experience3-graphic" class="graphic"><img src="./images/heart.png"></div>
+          <div id="experience3-description" class="description">
+            <p>As a member to a service organization, I provided <b>150+ hrs.</b> of community service to various causes. I also had <b>a leadership position</b> as a <a data-toggle="modal" data-target="#group">group trainer</a> in a team of three, tasked with the orientation process for new members.</p>
+          </div>
+	  </div>
+        </div>
+
+      </div>
+      
+      <div class="more-bar"><button type="button" class="btn btn-default">More/Less</button></div>
+
+      <div id="more-experiences" class="row">
+
+        <div id="experience5" class="col-md-4 col-md-offset-2">
+	  <div class="experience module">
+          <h3>Physical Therapy Assistant</h3>
+	  <h5>Oct. 2015 - Dec. 2015</h5>
+          <div id="experience5-graphic" class="graphic"><img src="./images/briefcase.png"></div>
+          <div id="experience5-description" class="description">
+            <p>I worked briefly at a P.T. clinic, where I worked with <b>all ages</b> to provide quality healthcare. It was rewarding to <b>quickly learn</b> and <b>adapt</b> outside of my academic discipline and my comfort zone.</p>
+          </div>
+	  </div>
+        </div>
+
+        <div id="experience6" class="col-md-4">
+	  <div class="experience module">
+          <h3>Teaching Assistant (K-12)</h3>
+	  <h5>2013 - 2014</h5>
+          <div id="experience6-graphic" class="graphic"><img src="./images/pencil.png"></div>
+          <div id="experience6-description" class="description">
+	    <p>I interned at elementary, middle, and high school level classrooms, primarily for S.T.E.M. subjects. I learned how to <b>communicate technical concepts</b> to youth, and how to <b>work with my supervisors</b>.
+          </div>
+	  </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!--experiences-->
+
+  <div id="skills">
+    <div class="wrap container">
+      <h2>Skills and Attributes</h2>
+
+      <div class="col-md-4">
+        <div class="skill module"> 
+        <h3>Technical</h3>
+	<div class="description">
+          <ul> 
+            <li>Javascript</li>
+            <li>HTML/CSS</li>
+            <li>jQuery/AJAX</li>
+            <li>Git</li>
+            <li>C++</li>
+            <li>GimpShop</li>
+            <li>O.O.P.</li>
+            <li>Advanced Data Structures</li>
+          </ul>
+	</div>
+	</div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="skill module"> 
+        <h3>Qualities</h3>
+	<div class="description">
+          <ul>
+            <li>Effective team member</li>
+            <li>Fast and curious learner</li>
+            <li>Eager to provide high-integrity work</li>
+            <li>Thoughtful written communicator</li>
+          </ul>
+	</div>
+	</div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="skill module"> 
+        <h3>I am familiar with...</h3>
+	<div class="description">
+          <ul>
+            <li>Grunt.js</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>SASS</li>
+	    <li>JsLint</li>
+	    <li>LaTex</li>
+          </ul>
+	</div>
+	</div>
+      </div>
+
+    </div>
+  </div><!--skills-->
+
+  <div id="goals"> 
+    <div class="wrap container">
+      <h2>Goals and Future</h2>
+      <div class="row">
+
+        <div id="goal1" class="col-md-4">
+	  <div class="goal module">
+	  <h3>Agenda</h3>
+          <div id="goal1-graphic" class="graphic"><img src="./images/earth-globe.png"></div>
+          <div id="goal1-description" class="description"><p>I imagine that one day I will be working at a place that supports <b>philanthropic causes</b>, or maybe works towards <b>a greener environment</b>. It will definitely be important to me that my work is making the world a better place.</p></div>
+	  </div>
+        </div>
+	
+        <div id="goal2" class="col-md-4">
+	  <div class="goal module">
+	  <h3>Learning</h3>
+          <div id="goal2-graphic" class="graphic"><img src="./images/computer-mouse.png"></div>
+          <div id="goal2-description" class="description"><p>I'd eventually like to work with visualization or graphics libraries, such as <b>D3.js</b>, <b>Processing</b>, <b>Tween.js</b>, and <b>three.js</b>. If I'm not producing art with code, I could instead be learning <b>After Effects</b>, <b>Illustrator</b>, or <b>Photoshop</b>.</p></div>
+	  </div>
+        </div>
+
+        <div id="goal3" class="col-md-4">
+	  <div class="goal module">
+	  <h3>Teaching</h3>
+          <div id="goal3-graphic" class="graphic"><img src="./images/book.png"></div>
+          <div id="goal3-description" class="description"><p>Learning so many new things has been a difficult but exciting adventure; I hope to give back through <b>education</b> at some point in my career, either by providing <b>training</b> for colleagues, or through <b>web-based</b> resources.</p></div>
+	  </div>
+        </div>
+
+      </div><!--row-->
+      <div class="more-bar"></div>
+
+    </div>
+  </div><!--goals-->
+
+  <div id="thanks">
+    <div class="wrap container">
+      <h2>Thanks!</h2>
+      <div id = "mylinks"> 
+	<p>Contact Me: kklee (at) ucdavis.edu</p>
+	<span id="acknowledgement"><p>Graphical icons designed by Freepik ("OdinIcons").</p></span>
+      </div>
+    </div>
+  </div>
+
+
+</div><!--container-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/bootstrap.min.js"></script>
+<script src="./jquery-color/jquery.color.js"></script>
+<script src="./jquery-color/jquery.color.svg-names.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
+
