@@ -12,5 +12,3 @@ Hope you like it (so far)!
 
 
 *Kelvin Lee*
-
-*kklee@ucdavis.edu*
